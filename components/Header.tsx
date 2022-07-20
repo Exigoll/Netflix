@@ -27,7 +27,8 @@ const Header = () => {
              alt="Netflix logo"
              width={100}
              height={100}
-             className="cursor-pointer object-contain" />
+             className="cursor-pointer object-contain"
+        />
         <ul className="hidden space-x-4 md:flex">
           <li className="headerLink">Home</li>
           <li className="headerLink">TV Shows</li>
@@ -37,12 +38,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="flex items-center space-x-4 text-sm font-light">
-        <SearchIcon className="hidden sm:inline"
-                    width={20}
-                    height={20} />
+        <SearchIcon className="hidden sm:inline h-5 w-6"
+        />
         <p className="hidden lg:inline">Kids</p>
-        <BellIcon width={20}
-                  height={20} />
+        <BellIcon className="h-5 w-6" />
         <Link href="/account">
           <img className="cursor-pointer rounded"
                src="https://rb.gy/g1pwyx"
