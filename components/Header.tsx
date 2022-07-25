@@ -2,9 +2,11 @@ import React from "react";
 
 import { BellIcon, SearchIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import useAuth from "../hooks/useAuth";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const { logout } = useAuth();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +47,8 @@ const Header = () => {
         <Link href="/account">
           <img className="cursor-pointer rounded"
                src="https://rb.gy/g1pwyx"
-               alt="" />
+               alt=""
+               onClick={logout} />
         </Link>
       </div>
     </header>
